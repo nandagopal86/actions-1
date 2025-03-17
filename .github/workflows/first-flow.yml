@@ -10,10 +10,19 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Welcome message
-        run: echo "My first Github Actions Job"
+        run:  | 
+          echo "My first Github Actions Job"
+          ls -ltra
+          cat READ.md
+              
+      - name: Generate ASII Artwork
+        run: cowsay -f dragan "Run for cover, I am a DRAGON...RAWR" >> dragon.txt
+       
+       
+       # - name: List files
+       # run: ls
 
-      - name: List files
-        run: ls
+      # - name: Reade file
+      #  run: cat READ.md
 
-      - name: Reade file
-        run: cat READ.md
+      
